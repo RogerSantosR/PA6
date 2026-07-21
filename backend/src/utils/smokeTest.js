@@ -24,10 +24,10 @@ let failed = 0;
 function check(name, condition, extra = '') {
   if (condition) {
     passed++;
-    console.log(`  ✓ ${name}`);
+    console.log(`  [OK]   ${name}`);
   } else {
     failed++;
-    console.log(`  ✗ ${name} ${extra}`);
+    console.log(`  [FAIL] ${name} ${extra}`);
   }
 }
 

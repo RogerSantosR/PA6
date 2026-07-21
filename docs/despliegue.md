@@ -30,7 +30,7 @@ Orden recomendado: Atlas → Backend → Frontends.
    o expón un endpoint temporal. Con la conexión activa también puedes sembrar desde local
    apuntando `MONGODB_URI` al clúster y corriendo `npm run seed`.
 
-> ⚠️ El plan gratuito de Render "duerme" tras inactividad; la primera petición puede tardar ~30 s.
+> Nota: el plan gratuito de Render "duerme" tras inactividad; la primera petición puede tardar ~30 s.
 
 ## 3. Frontends en Vercel
 

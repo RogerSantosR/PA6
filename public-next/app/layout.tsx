@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { GraduationCap } from 'lucide-react';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -15,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <header className="topbar">
           <div className="container topbar-inner">
-            <Link href="/" className="brand">🎓 EduPlatform</Link>
+            <Link href="/" className="brand"><GraduationCap size={22} /> EduPlatform</Link>
             <a className="cta" href={PORTAL_URL}>Ingresar al portal</a>
           </div>
         </header>

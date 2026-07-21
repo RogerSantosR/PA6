@@ -1,16 +1,16 @@
 <div class="layout">
   <aside class="sidebar">
-    <div class="logo">🎓 Admin</div>
+    <div class="logo"><app-icon name="graduation-cap" [size]="24"></app-icon> Admin</div>
     <nav>
-      <a routerLink="/cursos" routerLinkActive="active">📚 Cursos</a>
-      <a routerLink="/categorias" routerLinkActive="active">🏷️ Categorías</a>
+      <a routerLink="/cursos" routerLinkActive="active"><app-icon name="book-open" [size]="18"></app-icon> Cursos</a>
+      <a routerLink="/categorias" routerLinkActive="active"><app-icon name="tag" [size]="18"></app-icon> Categorías</a>
     </nav>
     <div class="sidebar-footer">
       <div class="user">
         <strong>{{ user()?.name }}</strong>
         <small>{{ user()?.email }}</small>
       </div>
-      <button (click)="logout()">Cerrar sesión</button>
+      <button (click)="logout()"><app-icon name="log-out" [size]="16"></app-icon> Cerrar sesión</button>
     </div>
   </aside>
 

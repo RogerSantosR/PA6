@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Zap, ArrowRight } from 'lucide-react';
 import { getCourses } from '@/lib/api';
 
 // ISR: la página se regenera como máximo cada 60 segundos.
@@ -15,7 +16,7 @@ export default async function HomePage() {
         <div className="container">
           <h1>Aprende algo nuevo hoy</h1>
           <p>Catálogo público de cursos. Regístrate en el portal para inscribirte y seguir tu progreso.</p>
-          <div className="ssr-note">⚡ Renderizado estático con ISR (revalidate 60s)</div>
+          <div className="ssr-note"><Zap size={14} /> Renderizado estático con ISR (revalidate 60s)</div>
         </div>
       </section>
 
@@ -47,7 +48,7 @@ export default async function HomePage() {
           </div>
         )}
         <p style={{ paddingBottom: '3rem' }}>
-          ¿Listo para inscribirte? <a href={PORTAL_URL} style={{ color: 'var(--primary)', fontWeight: 600 }}>Entra al portal del estudiante →</a>
+          ¿Listo para inscribirte? <a href={PORTAL_URL} style={{ color: 'var(--primary)', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>Entra al portal del estudiante <ArrowRight size={16} /></a>
         </p>
       </div>
     </>

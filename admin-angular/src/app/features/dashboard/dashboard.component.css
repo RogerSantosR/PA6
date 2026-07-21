@@ -8,9 +8,10 @@
   flex-direction: column;
   padding: 1.5rem 1rem;
 }
-.logo { font-size: 1.4rem; font-weight: 700; margin-bottom: 2rem; padding: 0 0.5rem; }
+.logo { display: flex; align-items: center; gap: 0.5rem; font-size: 1.4rem; font-weight: 700; margin-bottom: 2rem; padding: 0 0.5rem; }
 .sidebar nav { display: flex; flex-direction: column; gap: 0.4rem; flex: 1; }
 .sidebar nav a {
+  display: flex; align-items: center; gap: 0.6rem;
   color: #c7d2fe; text-decoration: none; padding: 0.7rem 1rem; border-radius: 8px;
   font-weight: 500; transition: 0.15s;
 }
@@ -23,6 +24,7 @@
 .sidebar-footer button {
   width: 100%; background: transparent; border: 1px solid #6366f1; color: #e0e7ff;
   padding: 0.6rem; border-radius: 8px; cursor: pointer; font-weight: 600;
+  display: flex; align-items: center; justify-content: center; gap: 0.5rem;
 }
 .sidebar-footer button:hover { background: rgba(255, 255, 255, 0.08); }
 

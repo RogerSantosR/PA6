@@ -1,4 +1,5 @@
 import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { GraduationCap, LogOut } from 'lucide-react';
 import { useAuth } from '../context/AuthContext.jsx';
 
 export default function Navbar() {
@@ -13,14 +14,14 @@ export default function Navbar() {
   return (
     <header className="navbar">
       <div className="container navbar-inner">
-        <Link to="/" className="brand">🎓 EduPlatform</Link>
+        <Link to="/" className="brand"><GraduationCap size={22} /> EduPlatform</Link>
         <nav className="nav-links">
           <NavLink to="/">Catálogo</NavLink>
           {isAuthenticated && <NavLink to="/mis-inscripciones">Mis inscripciones</NavLink>}
           {isAuthenticated ? (
             <>
               <span className="nav-user">Hola, {user?.name?.split(' ')[0]}</span>
-              <button className="btn btn-ghost" onClick={handleLogout}>Salir</button>
+              <button className="btn btn-ghost btn-icon-text" onClick={handleLogout}><LogOut size={16} /> Salir</button>
             </>
           ) : (
             <>

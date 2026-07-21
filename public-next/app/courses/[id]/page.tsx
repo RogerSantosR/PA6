@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { getCourse, getCourses } from '@/lib/api';
 
 export const revalidate = 60;
@@ -29,7 +30,7 @@ export default async function CoursePage({ params }: { params: { id: string } })
 
   return (
     <div className="container detail">
-      <Link href="/" className="back">← Volver al catálogo</Link>
+      <Link href="/" className="back"><ArrowLeft size={16} /> Volver al catálogo</Link>
       <div className="detail-grid">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={course.imageUrl || 'https://picsum.photos/seed/course/600/400'} alt={course.title} />
@@ -42,7 +43,7 @@ export default async function CoursePage({ params }: { params: { id: string } })
             <li><strong>Precio:</strong> {course.price > 0 ? `S/ ${course.price}` : 'Gratis'}</li>
             <li><strong>Cupos:</strong> {course.capacity}</li>
           </ul>
-          <a className="btn" href={`${PORTAL_URL}/curso/${course._id}`}>Inscribirme en el portal →</a>
+          <a className="btn btn-icon-text" href={`${PORTAL_URL}/curso/${course._id}`}>Inscribirme en el portal <ArrowRight size={16} /></a>
         </div>
       </div>
     </div>

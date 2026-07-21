@@ -1,10 +1,10 @@
-# 🎓 Plataforma de Gestión de Cursos e Inscripciones
+# Plataforma de Gestión de Cursos e Inscripciones
 
 Proyecto integrador full stack — **Programación Web II (ISIL, código 30690)**.
 Aplicación web moderna que integra frontend, backend, persistencia, autenticación,
 gestión de estado, optimización para producción y controles básicos de seguridad.
 
-> ℹ️ **Antes de entregar**, completa las secciones marcadas con `⟨…⟩`
+> **Antes de entregar**, completa las secciones marcadas con `⟨…⟩`
 > (integrantes, URLs desplegadas, enlace de YouTube y capturas).
 
 ---
@@ -42,7 +42,7 @@ panel del estudiante y panel administrativo, todo con datos persistidos en Mongo
 | Panel administrativo | Angular 18, formularios reactivos | [`admin-angular/`](admin-angular/) |
 | Base de datos | MongoDB Atlas | — |
 
-📐 Diagramas y detalle en [`docs/arquitectura.md`](docs/arquitectura.md) y
+Diagramas y detalle en [`docs/arquitectura.md`](docs/arquitectura.md) y
 [`docs/modelo-datos.md`](docs/modelo-datos.md).
 
 ```
@@ -152,7 +152,7 @@ Resumen: **backend → Render**, **frontends → Vercel**, **base de datos → M
 
 ## 12. Video de exposición (YouTube)
 
-🎥 ⟨https://youtu.be/…⟩  *(12–15 min, todos los integrantes con cámara)*
+⟨https://youtu.be/…⟩  *(12–15 min, todos los integrantes con cámara)*
 
 ## 13. Documentación técnica (`/docs`)
 

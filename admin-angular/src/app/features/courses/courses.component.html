@@ -3,7 +3,7 @@
     <h1>Cursos</h1>
     <p class="muted">Gestiona el catálogo de cursos.</p>
   </div>
-  <button class="btn btn-primary" (click)="openCreate()">+ Nuevo curso</button>
+  <button class="btn btn-primary btn-icon-text" (click)="openCreate()"><app-icon name="plus" [size]="16"></app-icon> Nuevo curso</button>
 </div>
 
 <div class="toolbar">
@@ -14,7 +14,7 @@
     (input)="search = $any($event.target).value"
     (keyup.enter)="loadCourses()"
   />
-  <button class="btn btn-ghost" (click)="loadCourses()">Buscar</button>
+  <button class="btn btn-ghost btn-icon-text" (click)="loadCourses()"><app-icon name="search" [size]="16"></app-icon> Buscar</button>
 </div>
 
 @if (error && !showForm) {
@@ -53,8 +53,8 @@
               </span>
             </td>
             <td class="actions">
-              <button class="btn-icon" (click)="openEdit(course)">✏️</button>
-              <button class="btn-icon" (click)="remove(course)">🗑️</button>
+              <button class="btn-icon" title="Editar" (click)="openEdit(course)"><app-icon name="pencil" [size]="16"></app-icon></button>
+              <button class="btn-icon btn-icon-danger" title="Eliminar" (click)="remove(course)"><app-icon name="trash" [size]="16"></app-icon></button>
             </td>
           </tr>
         }

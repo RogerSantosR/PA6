@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
+import { ArrowLeft, Check } from 'lucide-react';
 import api from '../api/client.js';
 import { useAuth } from '../context/AuthContext.jsx';
 import { useEnrollments } from '../context/EnrollmentContext.jsx';
@@ -44,13 +45,13 @@ export default function CourseDetail() {
   };
 
   if (loading) return <p className="container">Cargando…</p>;
-  if (!course) return <div className="container"><p>Curso no encontrado.</p><Link to="/">← Volver</Link></div>;
+  if (!course) return <div className="container"><p>Curso no encontrado.</p><Link to="/" className="back-link"><ArrowLeft size={16} /> Volver</Link></div>;
 
   const enrolled = isEnrolled(course._id);
 
   return (
     <div className="container detail">
-      <Link to="/" className="back-link">← Volver al catálogo</Link>
+      <Link to="/" className="back-link"><ArrowLeft size={16} /> Volver al catálogo</Link>
       <div className="detail-grid">
         <img src={course.imageUrl || 'https://picsum.photos/seed/course/600/400'} alt={course.title} />
         <div>
@@ -64,7 +65,7 @@ export default function CourseDetail() {
           </ul>
           {msg && <div className={`alert alert-${msg.type}`}>{msg.text}</div>}
           {enrolled ? (
-            <button className="btn btn-success" disabled>✓ Ya estás inscrito</button>
+            <button className="btn btn-success btn-icon-text" disabled><Check size={16} /> Ya estás inscrito</button>
           ) : (
             <button className="btn btn-primary" onClick={handleEnroll} disabled={working}>
               {working ? 'Procesando…' : isAuthenticated ? 'Inscribirme' : 'Inicia sesión para inscribirte'}

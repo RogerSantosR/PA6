@@ -3,7 +3,7 @@
     <h1>Categorías</h1>
     <p class="muted">Segunda entidad del sistema. Clasifica los cursos.</p>
   </div>
-  <button class="btn btn-primary" (click)="openCreate()">+ Nueva categoría</button>
+  <button class="btn btn-primary btn-icon-text" (click)="openCreate()"><app-icon name="plus" [size]="16"></app-icon> Nueva categoría</button>
 </div>
 
 @if (error && !showForm) {
@@ -30,8 +30,8 @@
             <td>{{ cat.name }}</td>
             <td>{{ cat.description || '—' }}</td>
             <td class="actions">
-              <button class="btn-icon" (click)="openEdit(cat)">✏️</button>
-              <button class="btn-icon" (click)="remove(cat)">🗑️</button>
+              <button class="btn-icon" title="Editar" (click)="openEdit(cat)"><app-icon name="pencil" [size]="16"></app-icon></button>
+              <button class="btn-icon btn-icon-danger" title="Eliminar" (click)="remove(cat)"><app-icon name="trash" [size]="16"></app-icon></button>
             </td>
           </tr>
         }

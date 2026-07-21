@@ -1,6 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { IconComponent } from '../../shared/icon.component';
 import { CourseService } from '../../core/course.service';
 import { CategoryService } from '../../core/category.service';
 import { Category, Course } from '../../core/models';
@@ -8,7 +9,7 @@ import { Category, Course } from '../../core/models';
 @Component({
   selector: 'app-courses',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, IconComponent],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.css',
 })

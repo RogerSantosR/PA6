@@ -1,13 +1,14 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { IconComponent } from '../../shared/icon.component';
 import { CategoryService } from '../../core/category.service';
 import { Category } from '../../core/models';
 
 @Component({
   selector: 'app-categories',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, IconComponent],
   templateUrl: './categories.component.html',
   styleUrl: './categories.component.css',
 })
