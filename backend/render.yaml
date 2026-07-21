@@ -1,0 +1,31 @@
+# Blueprint de despliegue en Render (Infrastructure as Code).
+# En Render: New > Blueprint y apunta a este repositorio (rootDir backend/).
+# Las variables marcadas sync:false deben configurarse manualmente en el dashboard.
+services:
+  - type: web
+    name: plataforma-cursos-api
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 20.11.0
+      - key: JWT_EXPIRES_IN
+        value: 1d
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
+      - key: SEED_ADMIN_EMAIL
+        sync: false
+      - key: SEED_ADMIN_PASSWORD
+        sync: false
+      - key: SEED_STUDENT_EMAIL
+        sync: false
+      - key: SEED_STUDENT_PASSWORD
+        sync: false
