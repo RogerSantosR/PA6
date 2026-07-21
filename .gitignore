@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment / secrets
+.env
+**/.env
+.env.local
+**/.env.local
+!.env.example
+!**/.env.example
+
+# Builds
+dist/
+**/dist/
+build/
+**/build/
+.next/
+**/.next/
+out/
+**/out/
+
+# Angular
+.angular/
+**/.angular/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Coverage / tests
+coverage/
+**/coverage/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
