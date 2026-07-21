@@ -9,6 +9,7 @@
     "dev": "node --watch src/server.js",
     "dev:mem": "node src/utils/devServer.js",
     "seed": "node src/utils/seed.js",
+    "ensure-seed": "node src/utils/ensureSeed.js",
     "smoke": "node src/utils/smokeTest.js"
   },
   "engines": {
