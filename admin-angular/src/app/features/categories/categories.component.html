@@ -1,0 +1,71 @@
+<div class="page-head">
+  <div>
+    <h1>Categorías</h1>
+    <p class="muted">Segunda entidad del sistema. Clasifica los cursos.</p>
+  </div>
+  <button class="btn btn-primary" (click)="openCreate()">+ Nueva categoría</button>
+</div>
+
+@if (error && !showForm) {
+  <div class="alert">{{ error }}</div>
+}
+
+@if (loading) {
+  <p>Cargando…</p>
+} @else if (categories.length === 0) {
+  <p class="muted">No hay categorías registradas.</p>
+} @else {
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (cat of categories; track cat._id) {
+          <tr>
+            <td>{{ cat.name }}</td>
+            <td>{{ cat.description || '—' }}</td>
+            <td class="actions">
+              <button class="btn-icon" (click)="openEdit(cat)">✏️</button>
+              <button class="btn-icon" (click)="remove(cat)">🗑️</button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+}
+
+@if (showForm) {
+  <div class="modal-overlay" (click)="closeForm()">
+    <div class="modal" (click)="$event.stopPropagation()">
+      <h2>{{ editingId ? 'Editar categoría' : 'Nueva categoría' }}</h2>
+      @if (error) {
+        <div class="alert">{{ error }}</div>
+      }
+      <form [formGroup]="form" (ngSubmit)="save()">
+        <label>
+          Nombre
+          <input formControlName="name" />
+          @if (form.controls.name.touched && form.controls.name.invalid) {
+            <small class="err">Mínimo 2 caracteres</small>
+          }
+        </label>
+        <label>
+          Descripción (opcional)
+          <textarea formControlName="description" rows="3"></textarea>
+        </label>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-ghost" (click)="closeForm()">Cancelar</button>
+          <button type="submit" class="btn btn-primary" [disabled]="saving">
+            {{ saving ? 'Guardando…' : 'Guardar' }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+}

@@ -1,0 +1,32 @@
+<div class="login-wrap">
+  <form class="login-card" [formGroup]="form" (ngSubmit)="submit()">
+    <h1>🎓 Panel Admin</h1>
+    <p class="subtitle">Plataforma de Gestión de Cursos</p>
+
+    @if (error) {
+      <div class="alert">{{ error }}</div>
+    }
+
+    <label>
+      Correo
+      <input type="email" formControlName="email" placeholder="admin@isil.edu.pe" />
+      @if (form.controls.email.touched && form.controls.email.invalid) {
+        <small class="err">Ingresa un correo válido</small>
+      }
+    </label>
+
+    <label>
+      Contraseña
+      <input type="password" formControlName="password" />
+      @if (form.controls.password.touched && form.controls.password.invalid) {
+        <small class="err">Mínimo 6 caracteres</small>
+      }
+    </label>
+
+    <button type="submit" [disabled]="submitting">
+      {{ submitting ? 'Ingresando…' : 'Ingresar' }}
+    </button>
+
+    <p class="hint">Demo: <code>admin&#64;isil.edu.pe</code> / <code>Admin123*</code></p>
+  </form>
+</div>
