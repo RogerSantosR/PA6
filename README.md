@@ -4,7 +4,6 @@ Proyecto integrador full stack — **Programación Web II (ISIL, código 30690)*
 Aplicación web moderna que integra frontend, backend, persistencia, autenticación,
 gestión de estado, optimización para producción y controles básicos de seguridad.
 
-> **Antes de entregar**, completa las secciones marcadas con `⟨…⟩`
 > (integrantes, URLs desplegadas, enlace de YouTube y capturas).
 
 ---
@@ -152,7 +151,7 @@ Resumen: **backend → Render**, **frontends → Vercel**, **base de datos → M
 
 ## 12. Video de exposición (YouTube)
 
-⟨https://youtu.be/…⟩  *(12–15 min, todos los integrantes con cámara)*
+https://www.youtube.com/watch?v=WKIaCnwZgVQ
 
 ## 13. Documentación técnica (`/docs`)
 
@@ -163,4 +162,10 @@ Resumen: **backend → Render**, **frontends → Vercel**, **base de datos → M
 
 ## 14. Capturas
 
-⟨Agrega capturas del catálogo, la inscripción, "mis inscripciones" y el panel admin.⟩
+<img width="1610" height="590" alt="{5E5EC467-B2AE-406F-91E1-419F6C48F907}" src="https://github.com/user-attachments/assets/cf87996b-f7db-4c62-b9c4-ed1c6772792e" />
+<img width="1273" height="824" alt="{AA4F084C-2865-4C00-92CA-BB99947A6DFA}" src="https://github.com/user-attachments/assets/4a0c6053-7bd1-4a19-b68a-4e3baa37d551" />
+<img width="1276" height="829" alt="{7F7F901D-2536-4943-AF4D-858849D68483}" src="https://github.com/user-attachments/assets/a8153638-750c-4e60-80cb-430d16ff18e6" />
+<img width="1157" height="708" alt="{8C6A7C97-9E73-4F9E-AD89-7AD5669B2C5A}" src="https://github.com/user-attachments/assets/fc4f2122-8300-4876-8205-198d533d94b9" />
+
+
+
