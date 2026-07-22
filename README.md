@@ -27,9 +27,9 @@ panel del estudiante y panel administrativo, todo con datos persistidos en Mongo
 
 | Nombre | Rol / aporte principal | Usuario GitHub |
 |---|---|---|
-| ⟨Renato Marmanillo Santi⟩ | ⟨Backend / API⟩ | ⟨@usuario⟩ |
+| ⟨Renato Marmanillo Santi⟩ | ⟨Backend / API⟩ | ⟨@JadenShelby⟩ |
 | ⟨Roger Angel Santos Ramos⟩ | ⟨React / estado⟩ | ⟨@RogerSantosR⟩ |
-| ⟨Alexis Sebastian Quispe Ramos⟩ | ⟨Angular / admin⟩ | ⟨@usuario⟩ |
+| ⟨Alexis Sebastian Quispe Ramos⟩ | ⟨Angular / admin⟩ | ⟨@AlxR7⟩ |
 | ⟨Esli Rodrigo Julca Luis⟩ | ⟨Next.js / seguridad⟩ | ⟨@RodrigoJulca18⟩ |
 
 ## 4. Arquitectura y tecnologías
